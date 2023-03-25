@@ -107,7 +107,7 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <TMSWebPrivExts>$(TMSWebPrivExts);.map;.html</TMSWebPrivExts>
-        <PostBuildEvent><![CDATA[powershell -ExecutionPolicy Unrestricted -file ..\BuildScripts\PostBuildTemplate.ps1 "$(OUTPUTDIR)"
+        <PostBuildEvent><![CDATA[powershell -ExecutionPolicy Unrestricted -file $(PROJECTDIR)\BuildScripts\PostBuildTemplate.ps1 "$(OUTPUTDIR)"
 $(PostBuildEvent)]]></PostBuildEvent>
         <TMSWebEcmaScript>2</TMSWebEcmaScript>
     </PropertyGroup>
@@ -129,7 +129,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <PostBuildEvent><![CDATA[powershell -ExecutionPolicy Unrestricted -file ..\BuildScripts\PostBuildTemplate.ps1 "$(OUTPUTDIR)"
+        <PostBuildEvent><![CDATA[powershell -ExecutionPolicy Unrestricted -file $(PROJECTDIR)\BuildScripts\PostBuildTemplate.ps1 "$(OUTPUTDIR)"
 $(PostBuildEvent)]]></PostBuildEvent>
         <TMSWebEcmaScript>2</TMSWebEcmaScript>
     </PropertyGroup>
@@ -318,13 +318,8 @@ $(PostBuildEvent)]]></PostBuildEvent>
                     <Source Name="MainSource">Project1.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Steema Software\Steema TeeChart Standard VCL FMX 2022.35\Delphi26\Delphi26.win32\Bin\DclTee926.bpl">TeeChart Standard 2022 Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\TMSFNCCorePkgDEDXE12.bpl">TMS FNC Core for FMX/VCL Designtime</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\TMSFNCChartPkgDEDXE12.bpl">TMS FNC Chart for FMX/VCL Designtime</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\TMSFNCUIPackPkgDEDXE12.bpl">TMS FNC UI Pack for FMX/VCL Designtime</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\TMSFNCWXPackPkgDEDXE12.bpl">TMS FNC WX Pack for FMX/VCL Designtime</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
@@ -1824,7 +1819,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
         <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>powershell -ExecutionPolicy Unrestricted -file ..\BuildScripts\PostBuildTemplate.ps1 &quot;$(OUTPUTDIR)&quot;</PostBuildEvent>
+        <PostBuildEvent>powershell -ExecutionPolicy Unrestricted -file $(PROJECTDIR)\BuildScripts\PostBuildTemplate.ps1 &quot;$(OUTPUTDIR)&quot;</PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' And '$(Platform)'=='Win32'">
@@ -1832,7 +1827,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
         <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>powershell -ExecutionPolicy Unrestricted -file ..\BuildScripts\PostBuildTemplate.ps1 &quot;$(OUTPUTDIR)&quot;</PostBuildEvent>
+        <PostBuildEvent>powershell -ExecutionPolicy Unrestricted -file $(PROJECTDIR)\BuildScripts\PostBuildTemplate.ps1 &quot;$(OUTPUTDIR)&quot;</PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
 </Project>
